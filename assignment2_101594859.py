@@ -267,7 +267,6 @@ if __name__ == "__main__":
         print(f"Scanning {target} from port {start_port} to {end_port}")
         scanner.scan_range(start_port, end_port)
         open_ports = scanner.get_open_ports()
-        open_ports.append((22, "Open", "(SSH)"))
         print(f"--- Scan results for {target} ---")
         for port in open_ports:
             print(f"Port {port[0]}: {port[1]} {port[2]}"
